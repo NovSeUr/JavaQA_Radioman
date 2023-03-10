@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 
 class RadioTest {
     Radio radio = new Radio(10);
-
     @Test
     public  void testShouldSetRadNumByDefault () {
         Radio radio = new Radio();
@@ -17,7 +16,7 @@ class RadioTest {
     }
     @Test
     public  void testShouldSetCurrentStationMax () {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio();
 
         radio.setCurrentRadNum(9);
 
@@ -45,7 +44,7 @@ class RadioTest {
     }
     @Test
     public  void testShouldSetCurrentStationBoundaryValuesMaxOne () {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio();
 
         radio.setCurrentRadNum(8);
 
@@ -56,7 +55,7 @@ class RadioTest {
     }
     @Test
     public  void testShouldSetCurrentStationInMiddle () {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio();
 
         radio.setCurrentRadNum(5);
 
@@ -67,7 +66,7 @@ class RadioTest {
     }
     @Test
     public  void testShouldSetCurrentStationMin () {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio();
 
         radio.setCurrentRadNum(0);
 
@@ -78,7 +77,7 @@ class RadioTest {
     }
     @Test
     public  void testShouldSetCurrentStationBoundaryValuesMinOne () {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio();
 
         radio.setCurrentRadNum(1);
 
@@ -89,7 +88,7 @@ class RadioTest {
     }
     @Test
     public  void testShouldNotSetCurrentStationOverMax () {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio();
 
         radio.setCurrentRadNum(11);
 
@@ -100,7 +99,7 @@ class RadioTest {
     }
     @Test
     public  void testShouldNotSetCurrentStationLowerMin () {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio();
 
         radio.setCurrentRadNum(-1);
 
@@ -294,7 +293,7 @@ class RadioTest {
     }
     @Test
     public  void testShouldGetMinRadNum () {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio();
 
         int expected = 0;
         int actual = radio.getMinRadNum();
@@ -303,7 +302,7 @@ class RadioTest {
     }
     @Test
     public  void testShouldGetMaxRadNum () {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio();
 
         int expected = 9;
         int actual = radio.getMaxRadNum();
@@ -312,7 +311,7 @@ class RadioTest {
     }
     @Test
     public  void testShouldGetMinVolume () {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio();
 
         int expected = 0;
         int actual = radio.getMinVolume();
@@ -321,7 +320,7 @@ class RadioTest {
     }
     @Test
     public  void testShouldGetMaxVolume () {
-        Radio radio = new Radio(10);
+        Radio radio = new Radio();
 
         int expected = 100;
         int actual = radio.getMaxVolume();
