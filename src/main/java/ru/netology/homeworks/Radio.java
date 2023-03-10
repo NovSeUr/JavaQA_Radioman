@@ -12,9 +12,8 @@ public class Radio {
     private int maxRadNum = 9;
     private int minVolume = 0;
     private int maxVolume = 100;
-    private int currentRadNum = minRadNum;
-    private int currentVolume = minVolume;
-    private int stationsCount;
+    private int currentRadNum;
+    private int currentVolume;
 
     public Radio(int stationsCount) {
         maxRadNum = stationsCount - 1;

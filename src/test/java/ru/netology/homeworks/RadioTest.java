@@ -179,13 +179,18 @@ class RadioTest {
         radio.nextRadNum();
         int expected = 2;
         int actual = radio.getCurrentRadNum();
+
+        Assertions.assertEquals(expected,actual);
     }
     @Test
     public void testShouldSetRadioPrevFromEight(){
+        radio.setCurrentRadNum(0);
         radio.setCurrentRadNum(8);
-        radio.nextRadNum();
+        radio.prevRadNum();
         int expected = 7;
         int actual = radio.getCurrentRadNum();
+
+        Assertions.assertEquals(expected,actual);
     }
     @Test
     public void testShouldNotSetRadioNumOverMax(){
